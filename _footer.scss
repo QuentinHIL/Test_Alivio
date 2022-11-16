@@ -1,0 +1,57 @@
+footer {
+  font-family: 'Lato';
+  font-weight: normal;
+  height: 50vh;
+  background-color: #245852;
+
+  //conteneur de la section footer
+  #contfooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 80%;
+    margin: auto;
+
+    h2 {
+      margin-top: 2em;
+
+      a {
+        font-weight: bold;
+        text-decoration: none;
+        color: white;
+      }
+
+      a:hover {
+        @include boutonsortant;
+        color: $primcolor;
+        font-weight: normal;
+      }
+    }
+
+    ul {
+      height: 10em;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      list-style: none;
+      padding-left: 0;
+
+      li {
+        list-style: none;
+        padding-left: 0;
+
+        a {
+          color: white;
+          text-decoration: none;
+        }
+
+        a:hover {
+          @include boutonsortant;
+          color: $primcolor;
+        }
+      }
+    }
+
+  }
+}

@@ -1,0 +1,66 @@
+#letsee {
+  height: 100vh;
+  background-color: rgb(7, 95, 90);
+  display: flex;
+  align-items: center;
+  @include fontLato;
+
+  //agrandissement de la section
+  @media only screen and (max-width: 768px) {
+    height: 110vh;
+  }
+
+  //conteneur de la section 3
+  #contletsee {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+
+    //affiche en colonne des éléments de la section
+    @media only screen and (max-width: 768px) {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      text-align: center;
+    }
+
+    //division gauche
+    #section3_1_1 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h2 {
+        font-family: 'Georgia';
+        font-size: 3em;
+        color: white;
+
+        // rétrécissement du titre
+        @media only screen and (max-width: 992px) {
+          font-size: 2em;
+        }
+
+      }
+
+      span {
+        margin-bottom: 2em;
+        color: white;
+      }
+
+      .bouton {
+        @include boutonvert;
+        align-self: center;
+      }
+    }
+
+    //division droite (image/video)
+    #imagevideo {
+      #section3_1_2 {
+        width: 100%;
+      }
+    }
+  }
+}

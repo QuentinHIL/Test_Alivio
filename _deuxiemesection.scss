@@ -1,0 +1,203 @@
+#works {
+  height: 140vh;
+  @include fontLato;
+
+  //agrandissement hauteur section et alignement en colonne
+  @media only screen and (max-width: 768px) {
+    height: 320vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  //conteneur de la première partie
+  #contworks1 {
+    width: 60%;
+    margin: auto;
+
+    //élargissement de la première partie
+    @media only screen and (max-width: 768px) {
+      width: 80%;
+      margin: auto;
+      ;
+    }
+
+    //première partie
+    #section1 {
+      margin-top: 5em;
+      display: flex;
+      justify-content: space-evenly;
+
+      //affichage en colonne des éléments de la première partie
+      @media only screen and (max-width: 768px) {
+        margin-top: 0;
+        ;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+      }
+
+      //division gauche
+      #intersection1 {
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+
+        //alignement des éléments au centre
+        @media only screen and (max-width: 768px) {
+          align-items: center;
+        }
+
+        h3 {
+          font-weight: bold;
+          font-size: 0.75em;
+          margin-bottom: 0%;
+          width: fit-content;
+          height: fit-content;
+          font-size: 1em;
+        }
+
+        h2 {
+          font-family: 'Georgia';
+          font-size: 2em;
+          margin-top: 0%;
+          width: 70%;
+          height: fit-content;
+          color: $primcolor;
+
+          //rétrécissement de la taille du titre
+          @media only screen and (max-width: 768px) {
+            font-size: 1em;
+          }
+        }
+      }
+
+      //division droite
+      #intersection2 {
+        width: 45%;
+        display: flex;
+        align-items: center;
+
+        p {
+          font-size: 0.75em;
+          width: fit-content;
+        }
+      }
+    }
+  }
+
+  //conteneur de la deuxième partie
+  #contworks2 {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+
+    //deuxième partie (3 articles)
+    #section2 {
+      width: inherit;
+      margin-top: 5em;
+      margin-bottom: 5em;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      //affichage en colonne des trois articles
+      @media only screen and (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 70%;
+        margin: auto;
+      }
+
+      #cardone {
+        position: relative;
+        z-index: 0;
+        width: 28%;
+        display: flex;
+        flex-direction: column;
+
+        //élargissement de l'affichage de l'article
+        @media only screen and (max-width: 768px) {
+          width: 75%;
+        }
+
+        //alignement de l'article
+        @media only screen and (min-width: 768px) {
+          display: flex;
+          justify-content: space-between;
+        }
+
+        span {
+          font-family: 'Georgia';
+          font-size: 5em;
+          color: rgba(1, 153, 109, 0.2);
+          position: absolute;
+          top: -5%;
+          left: 15%;
+          z-index: -1;
+        }
+
+        h3 {
+          text-align: center;
+          font-family: 'Georgia';
+        }
+
+        p {
+          font-size: 1em;
+        }
+      }
+
+      #cardthree {
+
+        //alignement de l'article
+        @media only screen and (min-width: 768px) {
+          display: flex;
+          justify-content: space-between;
+        }
+
+        p {
+          width: fit-content;
+        }
+      }
+
+      .artbas {
+
+        //alignement de l'article
+        @media only screen and (min-width: 768px) {
+          display: flex;
+          justify-content: space-between;
+        }
+
+        position: relative;
+        z-index: 0;
+        width: 28%;
+        display: flex;
+        flex-direction: column;
+
+        //élargissement de l'affichage des articles
+        @media only screen and (max-width: 768px) {
+          width: 75%;
+        }
+
+        span {
+          font-family: 'Georgia';
+          font-size: 5em;
+          color: rgba(1, 153, 109, 0.2);
+          position: absolute;
+          top: -5%;
+          z-index: -1;
+        }
+
+        h3 {
+          text-align: center;
+          font-family: 'Georgia';
+        }
+      }
+    }
+  }
+}

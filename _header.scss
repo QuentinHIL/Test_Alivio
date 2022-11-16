@@ -1,0 +1,107 @@
+header {
+  @include fontLato;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  //passage du header en pleine largeur
+  @media only screen and (max-width: 992px) {
+    width: 100%;
+  }
+
+  // titre alivio du header
+  h1 {
+    @include affichagestyle;
+
+    a {
+      text-decoration: none;
+      font-weight: bold;
+      width: fit-content;
+      color: $primcolor;
+
+      &:hover {
+        @include boutonsortant;
+      }
+    }
+
+
+
+
+  }
+
+  // barre de navigation
+  nav {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+
+    //passage de la barre de navigation à une largeur de 70% du header
+    @media only screen and (max-width: 1440px) {
+      width: 70%;
+    }
+
+    //disparition de la barre de navigation (place insuffisante)
+    @media only screen and (max-width: 768px) {
+      display: none;
+    }
+
+    //liste menu
+    #menu {
+      width: 70%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      li {
+        display: flex;
+        a {
+          color: black;
+          text-decoration: none;
+
+          &:hover {
+            color: $primcolor;
+            @include boutonsortant;
+          }
+        }
+      }
+    }
+  }
+
+  //bouton sign in et start trial
+  div {
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    //agrandissement de la div des boutons sign in et start trial
+    @media only screen and (max-width: 1440px) {
+      width: 30%;
+    }
+
+    #signin {
+      width: 25%;
+      color: black;
+      text-decoration: none;
+
+      &:hover {
+        @include boutonsortant;
+        color: $primcolor;
+      }
+    }
+
+    .bouton {
+      @include boutonvert;
+      @media only screen and (max-width: 768px){
+        @include boutonmobile;
+          }
+      //restructuration du bouton start trial
+      @media only screen and (max-width: 992px) {
+        display: flex;
+        justify-content: center;
+        width: 8em;
+      }
+    }
+  }
+}

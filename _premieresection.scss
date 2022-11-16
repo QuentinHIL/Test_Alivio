@@ -1,0 +1,52 @@
+#hero {
+  @include fontLato;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-image: url('hero.jpg');
+  display: flex;
+  justify-content: space-around;
+
+  //rétrécissement de la hauteur de la section
+  @media only screen and (max-width: 768px) {
+    height: 80vh;
+  }
+
+  //conteneur section1
+  #conthero {
+    width: 85%;
+    margin: auto;
+
+    //conteneur éléments section 1
+    .conteneurhero {
+      width: 30%;
+      height: fit-content;
+      display: flex;
+      justify-content: flex-start;
+      align-self: center;
+      flex-direction: column;
+
+      h2 {
+        @include affichagestyle;
+        font-family: 'Georgia';
+        font-size: 3em;
+        color: $primcolor;
+        margin-bottom: 5%;
+
+        //rétrécissement du titre
+        @media only screen and (max-width: 992px) {
+          font-size: 2em;
+        }
+      }
+
+      p {
+        margin-top: 0%;
+      }
+
+      .bouton {
+        @include boutonvert;
+      }
+    }
+  }
+
+}
