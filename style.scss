@@ -1,11 +1,11 @@
-@import 'variables';
-@import 'mixin';
-@import 'header';
-@import 'footer';
-@import 'premieresection';
-@import 'deuxiemesection';
-@import 'troisiemesection'; 
-@import 'quatriemesection';
+@import './variables';
+@import './mixin';
+@import './header';
+@import './footer';
+@import './premieresection';
+@import './deuxiemesection';
+@import './troisiemesection'; 
+@import './quatriemesection';
 
 body {
   margin: 0;
